@@ -49,6 +49,34 @@ In the terminal:
 <pre class="overflow-visible!" data-start="1470" data-end="1507"><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>docker-compose up --build
 </span></span></code></div></div></pre>
 
+
+
+## ▶️ Option 3 — Run the Cube API Directly
+
+Runs the **CubeApi Web API** without using Docker.
+
+In the terminal:
+
+<pre class="overflow-visible!" data-start="432" data-end="498"><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>dotnet run --project src/Geometry.Presentation/CubeApi
+</span></span></code></div></div></pre>
+
+Once the API starts, it will display something like:
+
+<pre class="overflow-visible!" data-start="554" data-end="601"><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>Now</span><span> listening </span><span>on</span><span>: http://localhost:5079
+</span></span></code></div></div></pre>
+
+### 🌐 Open Swagger UI
+
+After the service starts, open your browser and go to:
+
+<pre class="overflow-visible!" data-start="684" data-end="721"><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>http://localhost:5079/swagger
+</span></span></code></div></div></pre>
+
+From there you can test:
+
+* **POST** `/api/Cube` — create a cube
+* **GET** `/api/Cube/{id}` — get a cube by ID
+
 After the container builds, open:
 
 <pre class="overflow-visible!" data-start="1544" data-end="1581"><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>http://localhost:5079/swagger</span></span></code></div></div></pre>
